@@ -1,0 +1,95 @@
+html {
+  font-family: "Open Sans", sans-serif, "Lobster", cursive;
+  background-color: #191839;
+  color: #c3c3c3;
+}
+body {
+  margin: 0;
+}
+header {
+  padding: 0.5rem;
+  background-color: #0b0b19;
+  text-align: center;
+  text-shadow: #3f3a93;
+}
+#app {
+  padding: 0.5rem;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  margin: 0;
+}
+h2 {
+  margin: 0;
+}
+
+.dev {
+  margin-top: 0;
+  font-size: 0.75rem;
+}
+.card {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(68, 63, 160, 0.5);
+  border-radius: 12px;
+  box-shadow: 4px 4px #3f3a93;
+}
+.log-stamp {
+  margin: 0;
+}
+.navButtons {
+  display: flex;
+  justify-content: start;
+}
+.btn {
+  width: 6rem;
+  height: 2rem;
+  background-color: #191839;
+  color: #c3c3c3;
+  border: none;
+}
+.tab-btn-active {
+  background-color: #635ced;
+  color: #191839;
+  width: 6rem;
+  height: 2rem;
+}
+.content-box {
+  margin-bottom: 0.5rem;
+  border: 4px solid #635ced;
+}
+#table-heading {
+  background-color: #27237c;
+  color: #c3c3c3;
+  border: 1px solid #c3c3c3;
+  padding: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+td {
+  padding: 0.5rem;
+  border: 1px solid #c3c3c3;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #191839;
+}
+tr:hover {
+  background-color: #9d9fc5;
+  color: #0b0b19;
+}
+
+.question-item:hover {
+  background-color: #9d9fc5;
+  color: #0b0b19;
+  cursor: pointer;
+}
+.answer {
+  background-color: #285e30;
+  color: #c3c3c3;
+  padding-left: 2rem;
+}
