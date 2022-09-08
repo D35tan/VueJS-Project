@@ -1,0 +1,129 @@
+:root {
+  --hide-done-filter: "";
+  --hide-open-filter: "";
+}
+body,
+html,
+h1 {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+}
+header {
+  font-family: "Lobster", cursive;
+  padding: 2rem;
+  margin: 0;
+  background-color: #216e9b;
+  color: #e0daa1;
+  text-shadow: 4px 4px #9d9257;
+  text-align: center;
+  font-size: 2rem;
+}
+form {
+  gap: 1rem;
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#todo-input {
+  width: 50vw;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+#add-btn,
+#remove-btn {
+  height: 2.5rem;
+  width: fit-content;
+  padding-inline: 0.5rem;
+  background-color: #216e9b;
+  color: #e0daa1;
+  border: 2px solid #216e9b;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 4px 4px #9d9257;
+}
+#add-btn:active,
+#remove-btn:active {
+  background-color: #13415b;
+  color: #deddd5;
+  border: 2px solid #13415b;
+  transform: translateX(2px) translateY(2px);
+  box-shadow: 2px 2px #9d9257;
+}
+#filters,
+#todo-list {
+  margin-inline: auto;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#filter-all,
+#filter-open,
+#filter-done {
+  all: unset;
+  border: 2px solid black;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  height: 1em;
+  width: 1em;
+}
+#filter-all:checked,
+#filter-open:checked,
+#filter-done:checked {
+  background-color: #216e9b;
+}
+.radio {
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+.radios {
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: large;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  font-size: medium;
+  width: 100%;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+}
+.done-todo {
+  text-decoration: line-through;
+  color: grey;
+  display: var(--hide-done-filter);
+}
+.open-todo {
+  display: var(--hide-open-filter);
+  transition-timing-function: linear;
+}
+.checkbox {
+  _all: unset;
+  width: 1rem;
+  height: 1rem;
+  _accent-color: white;
+  border: 2px solid #216e9b;
+  margin-inline: 1rem;
+}

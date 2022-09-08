@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "description": "Learn HTML",
+      "done": true
+    },
+    {
+      "id": 2,
+      "description": "Learn CSS",
+      "done": true
+    },
+    {
+      "id": 3,
+      "description": "Learn JavaScript",
+      "done": true
+    },
+    {
+      "id": 4,
+      "description": "Learn Vue",
+      "done": true
+    },
+    {
+      "description": "Learn Vue CLI",
+      "done": false,
+      "id": 5
+    },
+    {
+      "description": "Finish this variant of the Todo App",
+      "done": true,
+      "id": 6
+    },
+    {
+      "description": "Make a Cooking-Recipe-App",
+      "done": false,
+      "id": 7
+    },
+    {
+      "description": "Implement an API with Recipes and a Nutrition-Table",
+      "done": false,
+      "id": 8
+    }
+  ]
+}

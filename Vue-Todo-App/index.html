@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue-ToDo-App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header><h1 id="header"></h1></header>
+    <div id="app">
+      <form v-on:submit.prevent action="" id="inputs">
+        <input
+          v-model="newEntry"
+          v-on:submit=""
+          type="text"
+          placeholder="Type in a todo-description..."
+          id="todo-input"
+        />
+        <button @click="addNewTodo(), reloadPage()" id="add-btn">Add</button>
+      </form>
+      <div id="filters">
+        <h2>{{filterHeadline}}</h2>
+        <div class="radios">
+          <div class="radio">
+            <input
+              v-on:click="activeRadio = 1"
+              @click="filterTodos(), toggleFilter()"
+              :checked="activeRadio === 1"
+              type="radio"
+              name="all"
+              id="filter-all"
+            />
+            <label for="filter all">All</label>
+          </div>
+          <div class="radio">
+            <input
+              v-on:click="activeRadio = 2"
+              @click="filterTodos(), toggleFilter()"
+              :checked="activeRadio === 2"
+              type="radio"
+              name="open"
+              id="filter-open"
+            />
+            <label for="filter-open">Open</label>
+          </div>
+          <div class="radio">
+            <input
+              v-on:click="activeRadio = 3"
+              @click="filterTodos(), toggleFilter()"
+              :checked="activeRadio === 3"
+              type="radio"
+              name="done"
+              id="filter-done"
+            />
+            <label for="filter-done">Done</label>
+          </div>
+        </div>
+        <button @click="removeDone(), reloadPage()" id="remove-btn">
+          Remove Done Todos
+        </button>
+      </div>
+      <ul id="todo-list">
+        <h2>{{ulHeadline}}</h2>
+        <li
+          class="todo-item"
+          :class="{'done-todo': todo.done, 'open-todo': !todo.done}"
+          v-for="todo of todos"
+        >
+          <input
+            class="checkbox"
+            type="checkbox"
+            :checked="todo.done"
+            @click="updateDoneState(todo)"
+          />{{todo.description}}
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="src/script.js"></script>
+  </body>
+</html>
